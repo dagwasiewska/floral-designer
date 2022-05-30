@@ -1,6 +1,8 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
+
 
 const zdj = new URL("../public/assets/IMG_4788.JPG", import.meta.url)
 
@@ -61,10 +63,11 @@ function Third() {
             </p>
           </div>
           <div className="min-h-2/3 ml-32">
-            <img
-              src={zdj}
+            <Image
+              src="/assets/IMG_4788.JPG"
+              width="70%" height="50%"
               className="border-solid border-black h-96  border-solid border-black border-2"
-            ></img>
+            />
           </div>
         </div>
       </motion.div>

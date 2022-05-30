@@ -1,15 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 // import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import Link from "next/link"
-
 import { motion } from "framer-motion"
 import Navbar from "./Navbar"
+import ImageSlider from "./ImageSlider"
+import Image from "next/image"
 
-const zdj = new URL("../public/assets/photo1.JPG", import.meta.url)
-const zdj2 = new URL("../public/assets/IMG_2816.JPG", import.meta.url)
-const zdj3 = new URL("../public/assets/IMG_6143.JPG", import.meta.url)
-const zdj4 = new URL("../public/assets/IMG_7833.JPG", import.meta.url)
-const zdj5 = new URL("../public/assets/IMG_2865.JPG", import.meta.url)
+// import ImageSlider from "./ImageSlider"
+
+
 
 function Second() {
   return (
@@ -20,7 +19,7 @@ function Second() {
         exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
-       <div className="sticky w-full h-46 px-8 z-[100] text-center font-poppins">
+        <div className="sticky w-full h-46 px-8 z-[100] text-center font-poppins">
           <h2 className="relative text-left font-serif font-light mt-8 text-green-900">
             S Y D N E Y B L O O M S
             <div className="justify-between items-center  h-full px-2 2xl:px-16 my-8">
@@ -51,41 +50,48 @@ function Second() {
             </div>
           </h2>
         </div>
+        {/* nie wiem o co chodzi tutaj  */}
+        <ImageSlider />
 
-        <div className="w-full h-full pt-32 pb-64 ">
+        {/* <div className="w-full h-full pt-32 pb-64 ">
           <div className="container grid grid-rows-5 mx-auto sm:column-1">
             <div className="mx-auto">
-              <img
-                src={zdj}
+              <Image
+                src="/photo1.JPG"
                 className="w-2/3 mx-auto mt-0 border-solid border-2 border-black"
-              ></img>
+                layout="fill"
+              />
             </div>
             <div className="mx-auto">
-              <img
-                src={zdj2}
+              <Image
+                src="/IMG_2816.JPG"
                 className="w-2/3 mx-auto mt-0 border-solid border-2 border-black"
-              ></img>
+                layout="fill"
+              />
             </div>
             <div className="mx-auto">
-              <img
-                src={zdj3}
+              <Image
+                src="/photo1.JPG"
                 className="w-2/3 mx-auto mt-0 border-solid border-2 border-black"
-              ></img>
+                layout="fill"
+              />
             </div>
             <div className="mx-auto">
-              <img
-                src={zdj4}
+              <Image
+                src="/photo1.JPG"
                 className="w-2/3 mx-auto mt-0 border-solid border-2 border-black"
-              ></img>
+                layout="fill"
+              />
             </div>
             <div className="mx-auto">
-              <img
-                src={zdj5}
+              <Image
+                src="/photo1.JPG"
                 className="w-2/3 mx-auto mt-0 border-solid border-2 border-black"
-              ></img>
+                layout="fill"
+              />
             </div>
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </>
   )
